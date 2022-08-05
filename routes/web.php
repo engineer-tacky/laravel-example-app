@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Sample\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/sample', [IndexController::class, 'show']);
-Route::get('/sample/{id}', [IndexController::class, 'showId']);
+Route::get('/sample', [App\Http\Controllers\Sample\IndexController::class, 'show']);
+Route::get('/sample/{id}', [App\Http\Controllers\Sample\IndexController::class, 'showId']);
+
+Route::get('/tweet', App\Http\Controllers\Tweet\IndexController::class);
