@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <title>{{ $title ?? 'つぶやきアプリ' }}</title>
+    @stack('css')
+</head>
+
+<body class="bg-gray-50">
+    {{ $slot }}
+</body>
+
+</html>
